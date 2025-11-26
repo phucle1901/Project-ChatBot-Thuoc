@@ -17,6 +17,7 @@ Sử dụng `ThreadPoolExecutor` để chạy đồng thời 3 tác vụ:
 - `backend/chatbots/chatbot_update_ltm.py`
 - Ở bước này ta sẽ sử dụng LLM để kiểm tra xem query của người dùng có chưa thông tin nên được lưu vào LTM không( các thông tin như sở thích thói quen ,...)
 - Nếu như ta phát hiện query chưa thống tin cần lưu thì ta cần kiểm tra trong bộ nhớ hiện tại đã có thông tin này chưa , nêu chưa có thì tiến hành cập nhật
+```
 # Flow cập nhật LTM:
 User Query → Extract User Info → Check Need Update → Update Memory File
 ```
