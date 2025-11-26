@@ -57,14 +57,9 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 
 #### **Bước 3: Tổng hợp doc + longterm memory + short term memory **
 -Sau khi lấy được các tài liệu retrival ở bước 2 , ta tiến hành kết hợp query ban đầu của người dùng + tài liệu truy vấn + long term memory và short term memory (short term memory ở đấy chính là lịch sử của cuộc hội thoại)
+
 - Nếu như context sau khi tổng hợp vượt quá 1 số lượng ký tự thì sẽ gọi tới thành phần summury (ở đây em cho là không vươt qua 10000 từ ). Lý do em phải làm vậy là vì mô hinh chatbot ở đây em sử dụng nhận đầu vào không quá 16.384 token.
 
-**Điều kiện kích hoạt:**
-- Khi tổng độ dài các document > 10,000 từ
-
-**Mục đích:**
-- Tránh vượt quá giới hạn token của LLM
-- Giữ lại thông tin quan trọng nhất
 
 
 ---
