@@ -18,7 +18,6 @@ class DrugEmbedding:
     
     def __init__(self, data_path: str = "./drugs-data-main/data"):
  
-
         self.data_path = Path(data_path)        
         self.details_path = self.data_path / "details"
         self.embeddings=GoogleGenerativeAIEmbeddings(

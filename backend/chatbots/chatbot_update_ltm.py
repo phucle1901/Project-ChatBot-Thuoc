@@ -33,6 +33,7 @@ Trả về JSON với format:
     ('human', 'Câu hỏi của người dùng: {user_query}')
 ])
 
+
 # Bước 2: Kiểm tra xem có cần cập nhật vào long-term memory không
 check_update_needed_prompt = ChatPromptTemplate.from_messages([
     ('system', """Bạn là một AI chuyên quản lý thông tin bộ nhớ dài hạn của người dùng.

@@ -15,11 +15,8 @@ Sử dụng `ThreadPoolExecutor` để chạy đồng thời 3 tác vụ:
 
 **a) Cập Nhật Bộ Nhớ Dài Hạn (Long-Term Memory - LTM)**
 - `backend/chatbots/chatbot_update_ltm.py`
-- Phân tích câu hỏi để trích xuất thông tin về người dùng
-- Thông tin bao gồm: tuổi tác, giới tính, bệnh lý, dị ứng, thuốc đang dùng, etc.
-- So sánh với bộ nhớ hiện tại để quyết định cập nhật
-- Lưu vào file `backend/memory/long_term_memory.txt`
-```python
+- Ở bước này ta sẽ sử dụng LLM để kiểm tra xem query của người dùng có chưa thông tin nên được lưu vào LTM không( các thông tin như sở thích thói quen ,...)
+- Nếu như ta phát hiện query chưa thống tin cần lưu thì ta cần kiểm tra trong bộ nhớ hiện tại đã có thông tin này chưa , nêu chưa có thì tiến hành cập nhật
 # Flow cập nhật LTM:
 User Query → Extract User Info → Check Need Update → Update Memory File
 ```
@@ -57,11 +54,12 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 
 ---
 
-#### **Bước 3: Tóm Tắt Tài Liệu (Document Summarization)**
-`backend/chatbots/chatbot_summary.py`
+#### **Bước 3: Tổng hợp doc + longterm memory + short term memory **
+-Sau khi lấy được các tài liệu retrival ở bước 2 , ta tiến hành kết hợp query ban đầu của người dùng + tài liệu truy vấn + long term memory và short term memory (short term memory ở đấy chính là lịch sử của cuộc hội thoại)
+- Nếu như context sau khi tổng hợp vượt quá 1 số lượng ký tự thì sẽ gọi tới thành phần summury (ở đây em cho là không vươt qua 10000 từ ). Lý do em phải làm vậy là vì mô hinh chatbot ở đây em sử dụng nhận đầu vào không quá 16.384 token.
 
 **Điều kiện kích hoạt:**
-- Khi tổng độ dài các document > 10,000 ký tự
+- Khi tổng độ dài các document > 10,000 từ
 
 **Mục đích:**
 - Tránh vượt quá giới hạn token của LLM ( với các mô hình như openai em sử dụng thì thấy nếu token vượt quá khoảng 16k token thì sẽ bị lỗi)
@@ -72,7 +70,8 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 
 #### **Bước 4: Tạo Câu Trả Lời (LLM Response Generation)**
 **LLM Model:** OpenAI GPT-4
-
+Ở bước này ta sẽ gửi câu truy vấn lấy được từ bước 3 đến LLM
+Sau khi nhận được câu phản hồi thì ta sẽ gửi output cho user đồng thời cập nhật short term memory (chính là lịch sử của đoạn hội thoại)
 ## Cấu Trúc Thư Mục
 
 ```

@@ -84,4 +84,5 @@ def chatbot_response(user_query):
                 'reference_docs': combined_doc_content
             })
 
+
         return chatbot_response.content
