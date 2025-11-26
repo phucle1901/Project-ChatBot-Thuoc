@@ -1,9 +1,10 @@
 
 ## Tracing
-<img width="1470" height="415" alt="Ảnh màn hình 2025-11-26 lúc 09 27 37" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518957074-dbaf899c-774c-4490-8909-49c481770f1f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054924Z&X-Amz-Expires=300&X-Amz-Signature=d7bcb945b458d56b418544c36e011b18beb47ce4c0c28ce4b11419a97e8c2cd2&X-Amz-SignedHeaders=host" />
+<img width="2940" height="830" alt="image" src="https://github.com/user-attachments/assets/1c239421-d14b-47b9-9c67-3946af172b2c" />
+
 
 ## Loging
-<img width="1039" height="364" alt="Ảnh màn hình 2025-11-26 lúc 09 32 50" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518958300-bdf09176-6cff-4ff9-8cb7-fd255b227256.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054924Z&X-Amz-Expires=300&X-Amz-Signature=25292525db071af5dc40f8bf77b423d3373e8942004cfd9b560d4f1593ad4c22&X-Amz-SignedHeaders=host" />
+<img width="2078" height="728" alt="image" src="https://github.com/user-attachments/assets/44a50bb3-5d10-4132-8ad6-9ed63b39c217" />
 
 ## Architect
 <img width="944" height="521" alt="Ảnh màn hình 2025-11-26 lúc 13 16 43" src="https://github.com/user-attachments/assets/22369775-c7c3-4957-a1bb-bdc026b249d4" />
