@@ -1,13 +1,13 @@
 # chatbotthuoc
 
 ## Tracing
-<img width="1470" height="415" alt="Ảnh màn hình 2025-11-26 lúc 09 27 37" src="https://github.com/user-attachments/assets/dbaf899c-774c-4490-8909-49c481770f1f" />
+<img width="1470" height="415" alt="Ảnh màn hình 2025-11-26 lúc 09 27 37" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518957074-dbaf899c-774c-4490-8909-49c481770f1f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054924Z&X-Amz-Expires=300&X-Amz-Signature=d7bcb945b458d56b418544c36e011b18beb47ce4c0c28ce4b11419a97e8c2cd2&X-Amz-SignedHeaders=host" />
 
 ## Loging
-<img width="1039" height="364" alt="Ảnh màn hình 2025-11-26 lúc 09 32 50" src="https://github.com/user-attachments/assets/bdf09176-6cff-4ff9-8cb7-fd255b227256" />
+<img width="1039" height="364" alt="Ảnh màn hình 2025-11-26 lúc 09 32 50" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518958300-bdf09176-6cff-4ff9-8cb7-fd255b227256.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054924Z&X-Amz-Expires=300&X-Amz-Signature=25292525db071af5dc40f8bf77b423d3373e8942004cfd9b560d4f1593ad4c22&X-Amz-SignedHeaders=host" />
 
 ## Architect
-<img width="930" height="534" alt="Ảnh màn hình 2025-11-24 lúc 23 56 27" src="https://github.com/user-attachments/assets/cf4d36ed-ea30-42c5-a5db-add911eb8eef" />
+<img width="930" height="534" alt="architect" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518224754-cf4d36ed-ea30-42c5-a5db-add911eb8eef.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054925Z&X-Amz-Expires=300&X-Amz-Signature=6baecd4aa8a26ffe9b51f56680f02ac828cb18810cf78330bbc27876a421c5f1&X-Amz-SignedHeaders=host" />
 
 ## Luồng hoạt động của hệ thống
 #### **Bước 1: Xử Lý Song Song (Parallel Processing)**
