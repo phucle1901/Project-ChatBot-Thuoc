@@ -68,7 +68,7 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 #### **Bước 4: Tạo Câu Trả Lời (LLM Response Generation)**
 **LLM Model:** OpenAI GPT-4
 Ở bước này ta sẽ gửi câu truy vấn lấy được từ bước 3 đến LLM
-Sau khi nhận được câu phản hồi thì ta sẽ gửi output cho user đồng thời cập nhật short term memory (chính là lịch sử của đoạn hội thoại)
+Sau khi nhận được câu phản hồi thì ta sẽ gửi output cho user đồng thời cập nhật short term memory (chính là lịch sử của đoạn hội thoại). Short term memory trong đoạn code của em sử dụng thì nằm ở file frontend/gradio.ipynb
 ## Cấu Trúc Thư Mục
 
 ```
