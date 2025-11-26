@@ -58,22 +58,22 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 ---
 
 #### **Bước 3: Tóm Tắt Tài Liệu (Document Summarization)**
-📁 `backend/chatbots/chatbot_summary.py`
+`backend/chatbots/chatbot_summary.py`
 
 **Điều kiện kích hoạt:**
 - Khi tổng độ dài các document > 10,000 ký tự
 
 **Mục đích:**
-- Tránh vượt quá giới hạn token của LLM
+- Tránh vượt quá giới hạn token của LLM ( với các mô hình như openai em sử dụng thì thấy nếu token vượt quá khoảng 16k token thì sẽ bị lỗi)
 - Giữ lại thông tin quan trọng nhất
-- Tối ưu chi phí API
+
 
 ---
 
 #### **Bước 4: Tạo Câu Trả Lời (LLM Response Generation)**
 **LLM Model:** OpenAI GPT-4
 
-## 📁 Cấu Trúc Thư Mục
+## Cấu Trúc Thư Mục
 
 ```
 project/
