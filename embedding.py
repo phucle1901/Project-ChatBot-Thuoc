@@ -1,17 +1,4 @@
-"""
-BÀI TẬP: TẠO HỆ THỐNG EMBEDDING VÀ TÌM KIẾM THUỐC BẰNG FAISS
 
-Mục tiêu: Xây dựng một class để:
-1. Đọc dữ liệu thuốc từ file JSON
-2. Kết hợp các thuộc tính của mỗi loại thuốc thành 1 đoạn text
-3. Tạo embeddings bằng OpenAI
-4. Lưu vào FAISS index để tìm kiếm
-
-Kiến thức cần có:
-- Python cơ bản (class, list, dict, vòng lặp)
-- Đọc/ghi file JSON
-- Sử dụng thư viện pathlib để xử lý đường dẫn
-"""
 
 import json
 from pathlib import Path
@@ -27,23 +14,10 @@ dotenv.load_dotenv()
 
 # ========== BƯỚC 2: TẠO CLASS DrugEmbedding ==========
 class DrugEmbedding:
-    """
-    Class chính để xử lý embedding và tìm kiếm thuốc
-    """
+
     
     def __init__(self, data_path: str = "./drugs-data-main/data"):
-        """
-        Hàm khởi tạo - Chạy đầu tiên khi tạo object DrugEmbedding
-        
-        Args:
-            data_path: Đường dẫn đến thư mục chứa dữ liệu thuốc
-        
-        Nhiệm vụ:
-        1. Lưu đường dẫn dữ liệu
-        2. Tạo đường dẫn đến thư mục details (chứa các file JSON thuốc)
-        3. Khởi tạo OpenAIEmbeddings (cần OPENAI_API_KEY trong biến môi trường)
-        4. Khởi tạo các biến lưu trữ: vector_store và drugs_data
-        """
+ 
 
         self.data_path = Path(data_path)        
         self.details_path = self.data_path / "details"
@@ -55,24 +29,7 @@ class DrugEmbedding:
     
     
     def load_drug_data(self) -> List[Dict]:
-        """
-        Đọc tất cả file JSON thuốc từ thư mục details
-        
-        Returns:
-            List[Dict]: Danh sách các dictionary, mỗi dict chứa thông tin 1 loại thuốc
-        
-        Thuật toán:
-        1. Tạo list rỗng để chứa dữ liệu thuốc
-        2. Kiểm tra xem thư mục details có tồn tại không
-        3. Duyệt qua tất cả thư mục con (danh mục thuốc) trong details
-        4. Với mỗi danh mục, đọc tất cả file .json
-        5. Load nội dung JSON và thêm vào list
-        6. Trả về list đã đọc
-        """
-        # TODO: Tự hoàn thiện hàm này
-        # Gợi ý các bước:
-        
-        # Bước 1: Tạo list rỗng
+
         drugs = []
         for category_dir in self.details_path.iterdir():
             category_name=category_dir.name
@@ -90,40 +47,7 @@ class DrugEmbedding:
     
     
     def combine_drug_attributes(self, drug: Dict) -> str:
-        """
-        Kết hợp tất cả thuộc tính của 1 loại thuốc thành 1 chuỗi text
         
-        Args:
-            drug: Dictionary chứa thông tin thuốc (đọc từ JSON)
-        
-        Returns:
-            str: Chuỗi text đã kết hợp tất cả thuộc tính
-        
-        Ví dụ input:
-        {
-            "category": "Cơ-xương-khớp",
-            "file_name": "thuoc-giam-dau",
-            "describe": "Thuốc giảm đau...",
-            "ingredient": "Paracetamol 500mg",
-            ...
-        }
-        
-        Ví dụ output:
-        '''
-        Danh mục:
-        Cơ-xương-khớp
-        
-        Tên file:
-        thuoc-giam-dau
-        
-        Mô tả:
-        Thuốc giảm đau...
-        
-        Thành phần:
-        Paracetamol 500mg
-        ...
-        '''
-        """
 
         fields = [
             ('Danh mục', drug.get('category', '')),
@@ -144,17 +68,7 @@ class DrugEmbedding:
 
     
     def create_documents(self) -> List[Document]:
-        """
-        Tạo danh sách Document từ dữ liệu thuốc
-        Document là định dạng mà LangChain yêu cầu để tạo embeddings
-        
-        Returns:
-            List[Document]: Danh sách các Document
-        
-        Cấu trúc Document:
-        - page_content: Nội dung text (từ combine_drug_attributes)
-        - metadata: Thông tin bổ sung (id, category, file_name, source)
-        """
+  
 
         if not self.drugs_data:
             self.load_drug_data()
@@ -173,25 +87,11 @@ class DrugEmbedding:
 
     
     def create_embeddings_and_index(self, save_path: str = "./faiss_index",batch_size=10):
-        """
-        Tạo embeddings cho tất cả documents và lưu vào FAISS index
         
-        Args:
-            save_path: Đường dẫn để lưu FAISS index
-        
-        Returns:
-            FAISS vector store
-        
-        Quy trình:
-        1. Tạo documents từ dữ liệu thuốc
-        2. Sử dụng OpenAI để tạo embeddings cho mỗi document
-        3. FAISS sẽ tự động tạo index từ embeddings
-        4. Lưu index vào disk
-        """
-        print("📚 Đang tạo documents...")
+        print(" Đang tạo documents...")
         documents = self.create_documents()
-        print(f"✅ Đã tạo {len(documents)} documents")
-        print(f"🔄 Đang tạo embeddings (batch_size={batch_size})...")
+        print(f"Đã tạo {len(documents)} documents")
+        print(f"Đang tạo embeddings (batch_size={batch_size})...")
         for i in range(0, len(documents), batch_size):
             batch = documents[i:i + batch_size]
             print(f"   Batch {i//batch_size + 1}/{(len(documents)-1)//batch_size + 1}: {len(batch)} documents")
@@ -210,10 +110,10 @@ class DrugEmbedding:
                 )
                 self.vector_store.merge_from(batch_store)
     
-        print("✅ Đã tạo xong embeddings!")
-        print("💾 Đang lưu index...")
+        print("Đã tạo xong embeddings!")
+        print("Đang lưu index...")
         self.save_index(save_path)
-        print(f"✅ Đã lưu index vào {save_path}")
+        print(f"Đã lưu index vào {save_path}")
     
 
         return self.vector_store
@@ -280,16 +180,8 @@ class DrugEmbedding:
 
 # ========== BƯỚC 3: HÀM MAIN ĐỂ CHẠY CHƯƠNG TRÌNH ==========
 def main():
-    """
-    Hàm main - điểm bắt đầu của chương trình
-    
-    Quy trình:
-    1. Khởi tạo DrugEmbedding
-    2. Tạo embeddings và FAISS index
-    3. Test tìm kiếm
-    """
-    # TODO: Tự hoàn thiện
-    # Gợi ý:
+
+
     
     # Bước 1: Tạo object DrugEmbedding
     drug_embedding = DrugEmbedding(data_path="./drugs-data-main/data")

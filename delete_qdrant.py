@@ -19,14 +19,14 @@ def clear_qdrant_collection():
         collection_exists = any(c.name == collection_name for c in collections)
         
         if collection_exists:
-            print(f"🗑️  Đang xóa collection '{collection_name}'...")
+            print(f"Đang xóa collection '{collection_name}'...")
             client.delete_collection(collection_name)
-            print(f"✅ Đã xóa collection '{collection_name}' thành công!")
+            print(f"Đã xóa collection '{collection_name}' thành công!")
         else:
-            print(f"ℹ️  Collection '{collection_name}' không tồn tại.")
+            print(f"ℹCollection '{collection_name}' không tồn tại.")
     
     except Exception as e:
-        print(f"❌ Lỗi khi xóa collection: {str(e)}")
+        print(f"Lỗi khi xóa collection: {str(e)}")
 
 if __name__ == "__main__":
     clear_qdrant_collection()
