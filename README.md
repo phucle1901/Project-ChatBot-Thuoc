@@ -1,4 +1,3 @@
-<img width="953" height="551" alt="Ảnh màn hình 2025-11-26 lúc 13 13 01" src="https://github.com/user-attachments/assets/499c3395-cd2d-4efb-8d8c-af366c78c79b" /># chatbotthuoc
 
 ## Tracing
 <img width="1470" height="415" alt="Ảnh màn hình 2025-11-26 lúc 09 27 37" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518957074-dbaf899c-774c-4490-8909-49c481770f1f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054924Z&X-Amz-Expires=300&X-Amz-Signature=d7bcb945b458d56b418544c36e011b18beb47ce4c0c28ce4b11419a97e8c2cd2&X-Amz-SignedHeaders=host" />
