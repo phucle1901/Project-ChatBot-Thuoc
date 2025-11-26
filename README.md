@@ -25,19 +25,19 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 ```
 
 **b) Lấy Dữ Liệu Bộ Nhớ Dài Hạn**
-- 📁 `backend/get_doc/get_long_term.py`
+- `backend/get_doc/get_long_term.py`
 - Đọc thông tin người dùng từ `long_term_memory.txt`
 - Cung cấp context cá nhân hóa cho câu trả lời
 
 **c) Mở Rộng Câu Hỏi (Query Expansion)**
-- 📁 `backend/get_doc/expand_query.py`
+- `backend/get_doc/expand_query.py`
 - Sử dụng LLM để mở rộng câu hỏi gốc thành 2 câu hỏi:
   - Câu 1: Câu hỏi gốc
   - Câu 2: Câu hỏi mở rộng về thành phần/công dụng/liều lượng
 - Mục đích: Tăng độ chính xác khi tìm kiếm tài liệu
 
 #### **Bước 2: Truy Xuất Tài Liệu (RAG - Retrieval)**
-📁 `backend/get_doc/get_docs.py` + `backend/get_doc/rag.py`
+`backend/get_doc/get_docs.py` + `backend/get_doc/rag.py`
 
 **Quy trình:**
 1. Sử dụng các câu hỏi đã mở rộng để tìm kiếm trong vector database
