@@ -6,7 +6,7 @@
 <img width="1039" height="364" alt="Ảnh màn hình 2025-11-26 lúc 09 32 50" src="https://github-production-user-asset-6210df.s3.amazonaws.com/127717381/518958300-bdf09176-6cff-4ff9-8cb7-fd255b227256.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251126T054924Z&X-Amz-Expires=300&X-Amz-Signature=25292525db071af5dc40f8bf77b423d3373e8942004cfd9b560d4f1593ad4c22&X-Amz-SignedHeaders=host" />
 
 ## Architect
-<img width="978" height="525" alt="Ảnh màn hình 2025-11-26 lúc 13 13 24" src="https://github.com/user-attachments/assets/339b93d8-107c-4bbf-b1b9-64faf25d8bfb" />
+<img width="944" height="521" alt="Ảnh màn hình 2025-11-26 lúc 13 16 43" src="https://github.com/user-attachments/assets/22369775-c7c3-4957-a1bb-bdc026b249d4" />
 
 
 ## Luồng hoạt động của hệ thống
