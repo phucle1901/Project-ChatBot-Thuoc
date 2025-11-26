@@ -62,7 +62,7 @@ User Query → Extract User Info → Check Need Update → Update Memory File
 - Khi tổng độ dài các document > 10,000 từ
 
 **Mục đích:**
-- Tránh vượt quá giới hạn token của LLM ( với các mô hình như openai em sử dụng thì thấy nếu token vượt quá khoảng 16k token thì sẽ bị lỗi)
+- Tránh vượt quá giới hạn token của LLM
 - Giữ lại thông tin quan trọng nhất
 
 
