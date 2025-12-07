@@ -1,6 +1,3 @@
-Người dùng thích ăn đồ ngọt
-Người dùng 65 tuổi, bị tiểu đường type 2
-Người dùng đang dùng thuốc huyết áp
-Người dùng cao huyết áp, tim mạch yếu
-Người dùng đau đầu
-Người dùng dị ứng với penicillin
+Người dùng 18 tuổi, không có tiền sử bệnh, không dùng thuốc, không dị ứng thuốc, đau đầu do suy nghĩ nhiều
+đau bụng, không buồn đi vệ sinh, ăn đồ không sạch
+đau nhẹ, thiếu ngủ, làm việc quá sức
